@@ -1,6 +1,14 @@
 package Chapter3;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.lang.reflect.Array;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.format.FormatStyle;
 import java.util.*;
 
 public class Practice {
@@ -83,20 +91,50 @@ public class Practice {
 //        integerList.remove(1);
 //        integerList.remove(new Integer(1));
 //        System.out.println(integerList);
-        List<String> list = new ArrayList<>();
-        list.add("hawk");
-        list.add("robin");
-//        Object[] objects = list.toArray();
-//        System.out.println(objects.length);
-        String[] a = new String[0];
-        String[] strings = list.toArray(a);
-        System.out.println(strings);
-        System.out.println(strings.length);
+//        List<String> list = new ArrayList<>();
+//        list.add("hawk");
+//        list.add("robin");
+////        Object[] objects = list.toArray();
+////        System.out.println(objects.length);
+//        String[] a = new String[0];
+//        String[] strings = list.toArray(a);
+//        System.out.println(strings);
+//        System.out.println(strings.length);
+//
+//        String[] b = new String[5];
+//        String[] strings_b = list.toArray(b);
+//        System.out.println(strings_b);
+//        System.out.println(strings_b.length);
 
-        String[] b = new String[5];
-        String[] strings_b = list.toArray(b);
-        System.out.println(strings_b);
-        System.out.println(strings_b.length);
+//        //from date time to string
+        DateTimeFormatter f = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);
+        LocalDateTime dateTime = LocalDateTime.of(2020, Month.JUNE, 06, 11,30);
+//        System.out.println(dateTime.format(f));
+//        System.out.println(f.format(dateTime));
+//
+        DateTimeFormatter fCustom = DateTimeFormatter.ofPattern("MM, dd, yyyy, HH:mm");
+        System.out.println(dateTime.format(fCustom));
+//
+//
+//        //from string to date time
+//        DateTimeFormatter ff = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+//        LocalDateTime dateTime1 = LocalDateTime.parse("2016-03-04 11:30", ff);
+//        System.out.println(dateTime1);
+//        Period p1 = Period.ofWeeks(1).ofDays(3);
+//        Period p2 = Period.ofDays(10);
+//        System.out.println(p2);
+
+//        LocalDate newYears = LocalDate.of(2017,1, 1);
+//        Period period = Period.ofDays(1);
+////        DateTimeFormatter f = DateTimeFormatter.ofPattern("MM-dd-yyyy");
+//        DateTimeFormatter ff = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
+//        System.out.println(ff.format(newYears.minus(period)));
+
+//        LocalDate xmas = LocalDate.of(2016, 12, 25);
+
+
+
+
 
 
 
