@@ -1,5 +1,6 @@
 package Chapter5.InheritedClassMembers;
 
+import Chapter5.Polymorphyism.Bird;
 import org.w3c.dom.UserDataHandler;
 
 public class Shark extends Fish {
@@ -9,6 +10,9 @@ public class Shark extends Fish {
         public Shark(int givenAge){
             super(givenAge);
             this.size = 4;
+        }
+        public int getAge(){
+            return 100;
         }
 
         public static void countEggs(){
@@ -53,7 +57,7 @@ public class Shark extends Fish {
     public static void main(String[] args) {
         Shark s = new Shark(55);
         Fish f = new Fish(33);
-        s.displaySharkDetails();
+//        s.displaySharkDetails();
 //        s.getFishEggsReport();
 //        s.getSharkEggsReport();
 //        System.out.println(Fish.hasEggs());
@@ -62,8 +66,15 @@ public class Shark extends Fish {
 //        Shark.eatGrass();
 //        f.getFishCountry();
 //        s.getSharkCountry();
-        System.out.println(s.country);
-        System.out.println(f.country);
+//        System.out.println(s.country);
+//        System.out.println(f.country);
+        System.out.println("----" + f.getAge());
+        System.out.println(" -----" + s.getAge());
+
+        Fish fishPolly = new Shark(155);
+        System.out.println(fishPolly.getAge());
+
+
 
 
 
