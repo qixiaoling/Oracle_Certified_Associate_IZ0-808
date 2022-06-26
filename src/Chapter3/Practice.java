@@ -132,6 +132,22 @@ public class Practice {
 
 //        LocalDate xmas = LocalDate.of(2016, 12, 25);
 
+            List<String> ocaTest = new ArrayList<>();
+
+        System.out.println(ocaTest.add("Hi"));
+
+        List<Integer> myList = new ArrayList<>();
+        myList.add(1);
+        myList.add(2);
+        myList.add(3);
+        myList.add(4);
+        myList.add(5);
+        List<Integer> yourList = myList.subList(1,1);
+        boolean bb = yourList.isEmpty();
+        System.out.println("is yourList empty? " + bb);
+
+
+
 
 
 
