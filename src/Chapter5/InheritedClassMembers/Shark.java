@@ -74,6 +74,7 @@ public class Shark extends Fish {
 
         Fish fishPolly = new Shark(155);
         System.out.println(fishPolly.getAge());
+        System.out.println(fishPolly.age);
 
 
 

@@ -2,7 +2,7 @@ package Chapter5.InheritedClassMembers;
 
 public class Fish {
     protected int size;
-    private int age;
+    public int age;
 
     protected String country = "Fish_Village";
 
